@@ -69,6 +69,7 @@ class MyLightningCLI(LightningCLI):
         Also define min and max metrics in wandb, because otherwise it just reports the 
         last known values, which is not what we want.
         """
+        
         config_file_name = os.path.join(wandb.run.dir, "cli_config.yaml")
 
         cfg_string = self.parser.dump(self.config, skip_none=False)
